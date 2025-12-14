@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, Download } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -51,6 +51,12 @@ const Hero = () => {
               <a href="#projects">View My Work</a>
             </Button>
             <Button variant="outline" size="lg" asChild>
+              <a href="/resume.pdf" download="Vikas_Tomar_Resume.pdf">
+                <Download className="h-4 w-4" />
+                Download CV
+              </a>
+            </Button>
+            <Button variant="glass" size="lg" asChild>
               <a href="#contact">Let's Connect</a>
             </Button>
           </div>

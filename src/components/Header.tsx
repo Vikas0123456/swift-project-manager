@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
 import { useState } from "react";
 
 const navLinks = [
@@ -34,7 +34,13 @@ const Header = () => {
             ))}
           </nav>
 
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center gap-3">
+            <Button variant="outline" size="sm" asChild>
+              <a href="/resume.pdf" download="Vikas_Tomar_Resume.pdf">
+                <Download className="h-4 w-4" />
+                Resume
+              </a>
+            </Button>
             <Button variant="hero" size="sm" asChild>
               <a href="mailto:vk.tomar.dev@gmail.com">Get in Touch</a>
             </Button>
