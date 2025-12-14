@@ -20,46 +20,46 @@ const Contact = () => {
           <div className="grid sm:grid-cols-2 gap-4 mb-12">
             <a
               href="mailto:vk.tomar.dev@gmail.com"
-              className="glass rounded-xl p-6 hover:border-primary/30 transition-all duration-300 group flex items-center gap-4"
+              className="glass-hover rounded-xl p-6 group flex items-center gap-4"
             >
-              <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+              <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground group-hover:scale-110 transition-all duration-300">
                 <Mail className="h-5 w-5" />
               </div>
               <div className="text-left">
-                <p className="text-sm text-muted-foreground">Email</p>
-                <p className="font-medium">vk.tomar.dev@gmail.com</p>
+                <p className="text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">Email</p>
+                <p className="font-medium group-hover:text-primary transition-colors duration-300">vk.tomar.dev@gmail.com</p>
               </div>
             </a>
 
             <a
               href="tel:+917067059611"
-              className="glass rounded-xl p-6 hover:border-primary/30 transition-all duration-300 group flex items-center gap-4"
+              className="glass-hover rounded-xl p-6 group flex items-center gap-4"
             >
-              <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+              <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground group-hover:scale-110 transition-all duration-300">
                 <Phone className="h-5 w-5" />
               </div>
               <div className="text-left">
-                <p className="text-sm text-muted-foreground">Phone</p>
-                <p className="font-medium">+91-7067059611</p>
+                <p className="text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">Phone</p>
+                <p className="font-medium group-hover:text-primary transition-colors duration-300">+91-7067059611</p>
               </div>
             </a>
 
             <a
-              href="https://linkedin.com/in/vikas-tomar-a9756520a"
+              href="https://www.linkedin.com/in/vikas-tomar-27bb363a0"
               target="_blank"
               rel="noopener noreferrer"
-              className="glass rounded-xl p-6 hover:border-primary/30 transition-all duration-300 group flex items-center gap-4"
+              className="glass-hover rounded-xl p-6 group flex items-center gap-4"
             >
-              <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+              <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground group-hover:scale-110 transition-all duration-300">
                 <Linkedin className="h-5 w-5" />
               </div>
               <div className="text-left">
-                <p className="text-sm text-muted-foreground">LinkedIn</p>
-                <p className="font-medium">vikas-tomar</p>
+                <p className="text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">LinkedIn</p>
+                <p className="font-medium group-hover:text-primary transition-colors duration-300">vikas-tomar</p>
               </div>
             </a>
 
-            <div className="glass rounded-xl p-6 flex items-center gap-4">
+            <div className="glass-hover rounded-xl p-6 flex items-center gap-4 group">
               <div className="p-3 rounded-lg bg-primary/10 text-primary">
                 <MapPin className="h-5 w-5" />
               </div>

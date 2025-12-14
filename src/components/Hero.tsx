@@ -23,8 +23,8 @@ const Hero = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-secondary/50 mb-8 animate-fade-in">
-            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/50 backdrop-blur-xl bg-card/40 hover:bg-card/60 hover:border-primary/30 transition-all duration-300 mb-8 animate-fade-in shadow-lg">
+            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-lg shadow-green-500/50" />
             <span className="text-sm text-muted-foreground">Available for opportunities</span>
           </div>
 
@@ -64,12 +64,12 @@ const Hero = () => {
           {/* Social Links */}
           <div className="flex items-center justify-center gap-4 animate-slide-up" style={{ animationDelay: '0.5s' }}>
             <Button variant="ghost" size="icon" asChild>
-              <a href="https://linkedin.com/in/vikas-tomar-a9756520a" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/vikas-tomar-27bb363a0" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <Linkedin className="h-5 w-5" />
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <a href="https://github.com/Vikas0123456" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <Github className="h-5 w-5" />
               </a>
             </Button>

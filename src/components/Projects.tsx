@@ -70,42 +70,46 @@ const Projects = () => {
             {projects.map((project, index) => (
               <article
                 key={project.title}
-                className="glass rounded-xl p-6 md:p-8 group hover:border-primary/30 transition-all duration-500"
+                className="glass-hover rounded-xl p-6 md:p-8 group relative overflow-hidden"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
+                {/* Shine effect */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-shimmer pointer-events-none" />
+                
                 {/* Header */}
-                <div className="flex items-start justify-between mb-4">
-                  <div className="p-3 rounded-lg bg-primary/10 text-primary">
+                <div className="flex items-start justify-between mb-4 relative z-10">
+                  <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
                     <project.icon className="h-6 w-6" />
                   </div>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold mb-1 group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-bold mb-1 group-hover:text-primary transition-colors duration-300 relative z-10">
                   {project.title}
                 </h3>
-                <p className="text-sm text-primary font-mono mb-3">{project.subtitle}</p>
+                <p className="text-sm text-primary font-mono mb-3 relative z-10">{project.subtitle}</p>
 
                 {/* Description */}
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4 relative z-10 group-hover:text-foreground/90 transition-colors duration-300">
                   {project.description}
                 </p>
 
                 {/* Highlights */}
-                <ul className="space-y-2 mb-6">
+                <ul className="space-y-2 mb-6 relative z-10">
                   {project.highlights.map((highlight, i) => (
-                    <li key={i} className="flex gap-2 text-sm text-muted-foreground">
-                      <span className="text-primary">▹</span>
+                    <li key={i} className="flex gap-2 text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
+                      <span className="text-primary group-hover:scale-110 inline-block transition-transform duration-300">▹</span>
                       {highlight}
                     </li>
                   ))}
                 </ul>
 
                 {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 relative z-10">
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-2.5 py-1 rounded text-xs font-mono bg-secondary text-muted-foreground"
+                      className="px-2.5 py-1 rounded text-xs font-mono bg-secondary/80 text-muted-foreground hover:bg-primary/20 hover:text-primary border border-transparent hover:border-primary/30 transition-all duration-300 cursor-default"
                     >
                       {tech}
                     </span>

@@ -43,17 +43,17 @@ const Skills = () => {
             {skillCategories.map((category, index) => (
               <div
                 key={category.title}
-                className="glass rounded-xl p-6 hover:border-primary/30 transition-all duration-300 group"
+                className="glass-hover rounded-xl p-6 group"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <h3 className="font-semibold text-lg mb-4 text-primary group-hover:text-foreground transition-colors">
+                <h3 className="font-semibold text-lg mb-4 text-primary group-hover:text-foreground transition-colors duration-300">
                   {category.title}
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="px-3 py-1.5 rounded-lg bg-secondary text-sm text-muted-foreground hover:text-foreground hover:bg-primary/10 transition-all duration-300"
+                      className="px-3 py-1.5 rounded-lg bg-secondary/80 text-sm text-muted-foreground hover:text-primary hover:bg-primary/20 border border-transparent hover:border-primary/30 transition-all duration-300 cursor-default"
                     >
                       {skill}
                     </span>
@@ -64,13 +64,13 @@ const Skills = () => {
           </div>
 
           {/* Tools Row */}
-          <div className="mt-12 glass rounded-xl p-6">
-            <h3 className="font-semibold text-lg mb-4 text-center">Tools & Platforms</h3>
+          <div className="mt-12 glass-hover rounded-xl p-6">
+            <h3 className="font-semibold text-lg mb-4 text-center text-primary">Tools & Platforms</h3>
             <div className="flex flex-wrap justify-center gap-4">
               {["Git", "Jira", "Swagger", "Figma", "Postman", "VS Code"].map((tool) => (
                 <span
                   key={tool}
-                  className="px-4 py-2 rounded-lg border border-border bg-background/50 text-sm text-muted-foreground hover:border-primary/50 hover:text-foreground transition-all duration-300"
+                  className="px-4 py-2 rounded-lg border border-border/50 bg-background/50 text-sm text-muted-foreground hover:border-primary/50 hover:text-primary hover:bg-primary/10 transition-all duration-300 cursor-default"
                 >
                   {tool}
                 </span>

@@ -17,7 +17,7 @@ const Experience = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
-          <div className="mb-16">
+          <div className="text-center mb-16">
             <span className="text-primary font-mono text-sm mb-2 block">03. Experience</span>
             <h2 className="text-3xl md:text-4xl font-bold">
               Work History
@@ -29,14 +29,14 @@ const Experience = () => {
             {/* Timeline Line */}
             <div className="absolute left-0 md:left-4 top-0 bottom-0 w-px bg-border" />
 
-            <div className="glass rounded-xl p-6 md:p-8 ml-6 md:ml-12 relative">
+            <div className="glass-hover rounded-xl p-6 md:p-8 ml-6 md:ml-12 relative group">
               {/* Timeline Dot */}
-              <div className="absolute left-[-30px] md:left-[-38px] top-8 w-4 h-4 rounded-full bg-primary border-4 border-background glow" />
+              <div className="absolute left-[-30px] md:left-[-38px] top-8 w-4 h-4 rounded-full bg-primary border-4 border-background glow group-hover:scale-125 transition-transform duration-300" />
 
               {/* Header */}
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
                 <div>
-                  <h3 className="text-xl md:text-2xl font-bold">Full Stack Developer</h3>
+                  <h3 className="text-xl md:text-2xl font-bold group-hover:text-primary transition-colors duration-300">Full Stack Developer</h3>
                   <p className="text-primary font-medium mt-1">MicroTechnologies India</p>
                 </div>
                 <div className="flex flex-col gap-2 text-sm text-muted-foreground">
@@ -54,8 +54,8 @@ const Experience = () => {
               {/* Achievements */}
               <ul className="space-y-3">
                 {achievements.map((achievement, index) => (
-                  <li key={index} className="flex gap-3 text-muted-foreground">
-                    <span className="text-primary mt-1.5 flex-shrink-0">▹</span>
+                  <li key={index} className="flex gap-3 text-muted-foreground group-hover:text-foreground/90 transition-colors duration-300">
+                    <span className="text-primary mt-1.5 flex-shrink-0 group-hover:scale-110 inline-block transition-transform duration-300">▹</span>
                     <span className="leading-relaxed">{achievement}</span>
                   </li>
                 ))}
@@ -67,13 +67,13 @@ const Experience = () => {
           <div className="mt-12 relative">
             <div className="absolute left-0 md:left-4 top-0 bottom-0 w-px bg-border" />
             
-            <div className="glass rounded-xl p-6 md:p-8 ml-6 md:ml-12 relative">
-              <div className="absolute left-[-30px] md:left-[-38px] top-8 w-4 h-4 rounded-full bg-secondary border-4 border-background" />
+            <div className="glass-hover rounded-xl p-6 md:p-8 ml-6 md:ml-12 relative group">
+              <div className="absolute left-[-30px] md:left-[-38px] top-8 w-4 h-4 rounded-full bg-secondary border-4 border-background group-hover:scale-125 transition-transform duration-300" />
               
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                 <div>
-                  <h3 className="text-lg md:text-xl font-bold">B.Tech in Electrical & Electronics Engineering</h3>
-                  <p className="text-muted-foreground mt-1">University Institute of Technology, RGPV</p>
+                  <h3 className="text-lg md:text-xl font-bold group-hover:text-primary transition-colors duration-300">B.Tech in Electrical & Electronics Engineering</h3>
+                  <p className="text-muted-foreground mt-1 group-hover:text-foreground/80 transition-colors duration-300">University Institute of Technology, RGPV</p>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
                   <Calendar className="h-4 w-4" />
