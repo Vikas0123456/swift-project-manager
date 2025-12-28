@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Github, Linkedin, Mail, Download } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, Download, FileText } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -58,6 +59,19 @@ const Hero = () => {
             </Button>
             <Button variant="glass" size="lg" asChild>
               <a href="#contact">Let's Connect</a>
+            </Button>
+          </div>
+
+          {/* Invitation Card Link */}
+          <div className="flex justify-center mb-8 animate-slide-up" style={{ animationDelay: '0.45s' }}>
+            <Button 
+              className="bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white font-bold px-6 py-3 rounded-full shadow-lg"
+              asChild
+            >
+              <Link to="/invitation">
+                <FileText className="h-4 w-4 mr-2" />
+                🎉 नववर्ष निमंत्रण पत्र देखें
+              </Link>
             </Button>
           </div>
 
