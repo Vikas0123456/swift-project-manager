@@ -1,9 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Mail, Linkedin, Phone, MapPin } from "lucide-react";
+import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
+
+const WHATSAPP_MSG = "Hi Vikas! I came across your portfolio website and would like to connect with you.";
+const WHATSAPP_URL = `https://wa.me/917067059611?text=${encodeURIComponent(WHATSAPP_MSG)}`;
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 md:py-32 relative">
+    <section id="contact" className="py-24 md:py-32 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center">
           {/* Section Header */}
@@ -72,8 +76,8 @@ const Contact = () => {
 
           {/* CTA */}
           <Button variant="hero" size="xl" asChild>
-            <a href="mailto:vk.tomar.dev@gmail.com">
-              <Mail className="h-5 w-5" />
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+              <WhatsAppIcon className="h-5 w-5" />
               Send a Message
             </a>
           </Button>

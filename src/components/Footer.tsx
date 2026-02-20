@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Vikas Tomar. Built with React & Tailwind CSS.
+            © {currentYear} Vikas Tomar.
           </p>
           
           <div className="flex items-center gap-4">

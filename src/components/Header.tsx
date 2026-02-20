@@ -1,5 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { Menu, X, Download } from "lucide-react";
+import { Menu, X, ExternalLink } from "lucide-react";
+import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
+
+const RESUME_URL = import.meta.env.VITE_RESUME_URL || "https://drive.google.com/file/d/1J6Nu1wSb9Dz57sQ8waYJ5IZTjTFwqg2j/view?usp=sharing";
+const WHATSAPP_MSG = "Hi Vikas! I came across your portfolio website and would like to connect with you.";
+const WHATSAPP_URL = `https://wa.me/917067059611?text=${encodeURIComponent(WHATSAPP_MSG)}`;
 import { useState, useEffect } from "react";
 
 const navLinks = [
@@ -148,13 +153,16 @@ const Header = () => {
 
           <div className="hidden md:flex items-center gap-3">
             <Button variant="outline" size="sm" asChild>
-              <a href="/resume.pdf" download="Vikas_Tomar_Resume.pdf">
-                <Download className="h-4 w-4" />
+              <a href={RESUME_URL} target="_blank" rel="noopener noreferrer">
+                <ExternalLink className="h-4 w-4" />
                 Resume
               </a>
             </Button>
             <Button variant="hero" size="sm" asChild>
-              <a href="mailto:vk.tomar.dev@gmail.com">Get in Touch</a>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                <WhatsAppIcon className="h-4 w-4" />
+                Get in Touch
+              </a>
             </Button>
           </div>
 
@@ -191,7 +199,10 @@ const Header = () => {
                 );
               })}
               <Button variant="hero" size="sm" className="mt-2" asChild>
-                <a href="mailto:vk.tomar.dev@gmail.com">Get in Touch</a>
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                  <WhatsAppIcon className="h-4 w-4" />
+                  Get in Touch
+                </a>
               </Button>
             </div>
           </nav>
